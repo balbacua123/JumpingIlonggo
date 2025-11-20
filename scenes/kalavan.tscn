@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://edy6wntqjjh3"]
+
+[ext_resource type="Texture2D" uid="uid://bafo4amkn3dvs" path="res://Fantasy Warrior/Sprites/Attack1.png" id="1_cr6xg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is1gb"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(164, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aivb0"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(328, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7egx"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(492, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u71ri"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(656, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ruph"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(820, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wokig"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(984, 0, 146, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cveh0"]
+atlas = ExtResource("1_cr6xg")
+region = Rect2(0, 0, 146, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b77fw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is1gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aivb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7egx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u71ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ruph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wokig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cveh0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6focf"]
+radius = 79.404
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_b77fw")
+autoplay = "default"
+frame_progress = 0.342085
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-43, 59)
+shape = SubResource("CircleShape2D_6focf")

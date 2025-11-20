@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsoxm2y3jrcry"]
+
+[ext_resource type="Script" path="res://scenes/world_2.gd" id="1_2yh7m"]
+[ext_resource type="PackedScene" uid="uid://dbe4xbnugrbuh" path="res://scenes/bg.tscn" id="1_k6o7t"]
+[ext_resource type="PackedScene" uid="uid://f65uvnqkvji2" path="res://scenes/ground.tscn" id="2_s21pk"]
+[ext_resource type="PackedScene" uid="uid://dnbixc008kidk" path="res://scenes/character.tscn" id="3_nx2ar"]
+[ext_resource type="PackedScene" uid="uid://bw1omllajx5y0" path="res://scenes/bird.tscn" id="4_o04dn"]
+[ext_resource type="PackedScene" uid="uid://edy6wntqjjh3" path="res://scenes/kalavan.tscn" id="5_8eu03"]
+[ext_resource type="PackedScene" uid="uid://dvsv16kusa2go" path="res://scenes/portal.tscn" id="6_mqf0l"]
+[ext_resource type="PackedScene" uid="uid://bhld7j0aay85n" path="res://scenes/lvl2.tscn" id="7_2mu28"]
+[ext_resource type="PackedScene" uid="uid://b7ry7a2am2c00" path="res://scenes/game_over.tscn" id="8_haetx"]
+[ext_resource type="PackedScene" uid="uid://bamdci4uljm7o" path="res://scenes/congrats.tscn" id="9_i0rmk"]
+
+[node name="Level2" type="Node"]
+script = ExtResource("1_2yh7m")
+
+[node name="Bg" parent="." instance=ExtResource("1_k6o7t")]
+
+[node name="Ground" parent="." instance=ExtResource("2_s21pk")]
+
+[node name="Character" parent="." instance=ExtResource("3_nx2ar")]
+position = Vector2(28, 360)
+
+[node name="Kalaban" parent="." instance=ExtResource("5_8eu03")]
+position = Vector2(750, 430)
+
+[node name="Portal" parent="." instance=ExtResource("6_mqf0l")]
+position = Vector2(1066, 429)
+
+[node name="Bird" parent="." instance=ExtResource("4_o04dn")]
+position = Vector2(292, 436)
+
+[node name="congrats" parent="." instance=ExtResource("9_i0rmk")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_2mu28")]
+
+[node name="GameOver" parent="." instance=ExtResource("8_haetx")]

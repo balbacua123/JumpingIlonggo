@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bamdci4uljm7o"]
+
+[node name="Button" type="Button"]
+offset_left = -2.0
+offset_top = -7.0
+offset_right = 1152.0
+offset_bottom = 654.0
+text = "CONGRATS PART!!!!!
+
+E CLOSE RA LIHOG. THXXX <3"

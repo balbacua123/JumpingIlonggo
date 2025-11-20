@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://dak3kkwj7a0jw"]
+
+[ext_resource type="PackedScene" uid="uid://dbe4xbnugrbuh" path="res://scenes/bg.tscn" id="1_i1q1d"]
+[ext_resource type="PackedScene" uid="uid://f65uvnqkvji2" path="res://scenes/ground.tscn" id="2_rnieu"]
+[ext_resource type="PackedScene" uid="uid://dnbixc008kidk" path="res://scenes/character.tscn" id="3_rtmwv"]
+[ext_resource type="PackedScene" uid="uid://bw1omllajx5y0" path="res://scenes/bird.tscn" id="4_68p7n"]
+[ext_resource type="PackedScene" uid="uid://edy6wntqjjh3" path="res://scenes/kalavan.tscn" id="5_je4f2"]
+[ext_resource type="PackedScene" uid="uid://0re6uq5uvvt" path="res://scenes/22.tscn" id="6_7j7q0"]
+
+[node name="Level2" type="Node"]
+
+[node name="Bg" parent="." instance=ExtResource("1_i1q1d")]
+
+[node name="Ground" parent="." instance=ExtResource("2_rnieu")]
+
+[node name="Character" parent="." instance=ExtResource("3_rtmwv")]
+position = Vector2(28, 360)
+
+[node name="Bird" parent="." instance=ExtResource("4_68p7n")]
+position = Vector2(368, 423)
+
+[node name="Area2D" parent="Bird" instance=ExtResource("5_je4f2")]
+position = Vector2(507, -32)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_7j7q0")]

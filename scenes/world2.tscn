@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsoxm2y3jrcry"]
+
+[ext_resource type="Script" path="res://scenes/world_2.gd" id="1_2yh7m"]
+[ext_resource type="Texture2D" uid="uid://dpx1oyj6k6qse" path="res://pixel-art-landscape-of-pine-forest-in-the-mountains-with-lake-and-clouds-8-bit-game-background-vector.jpg" id="2_pjpvb"]
+[ext_resource type="PackedScene" uid="uid://f65uvnqkvji2" path="res://scenes/ground.tscn" id="2_s21pk"]
+[ext_resource type="PackedScene" uid="uid://dnbixc008kidk" path="res://scenes/character.tscn" id="3_nx2ar"]
+[ext_resource type="PackedScene" uid="uid://bw1omllajx5y0" path="res://scenes/bird.tscn" id="4_o04dn"]
+[ext_resource type="PackedScene" uid="uid://edy6wntqjjh3" path="res://scenes/kalavan.tscn" id="5_8eu03"]
+[ext_resource type="PackedScene" uid="uid://dvsv16kusa2go" path="res://scenes/portal.tscn" id="6_mqf0l"]
+[ext_resource type="PackedScene" uid="uid://bhld7j0aay85n" path="res://scenes/lvl2.tscn" id="7_2mu28"]
+[ext_resource type="PackedScene" uid="uid://b7ry7a2am2c00" path="res://scenes/game_over.tscn" id="8_haetx"]
+[ext_resource type="PackedScene" uid="uid://bamdci4uljm7o" path="res://scenes/congrats.tscn" id="9_i0rmk"]
+
+[node name="Level2" type="Node"]
+script = ExtResource("1_2yh7m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_top = -323.0
+offset_right = 1891.0
+offset_bottom = 657.0
+texture = ExtResource("2_pjpvb")
+
+[node name="Ground" parent="." instance=ExtResource("2_s21pk")]
+
+[node name="Ground" parent="Ground" instance=ExtResource("2_s21pk")]
+position = Vector2(494, -296)
+
+[node name="Character" parent="." instance=ExtResource("3_nx2ar")]
+position = Vector2(28, 360)
+
+[node name="Kalaban" parent="." instance=ExtResource("5_8eu03")]
+position = Vector2(766, 126)
+
+[node name="Portal" parent="." instance=ExtResource("6_mqf0l")]
+position = Vector2(1071, 135)
+
+[node name="Bird" parent="." instance=ExtResource("4_o04dn")]
+position = Vector2(292, 436)
+
+[node name="congrats" parent="." instance=ExtResource("9_i0rmk")]
+visible = false
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_2mu28")]
+
+[node name="GameOver" parent="." instance=ExtResource("8_haetx")]

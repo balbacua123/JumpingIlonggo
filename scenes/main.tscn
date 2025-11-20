@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://uw08x2bhph7j"]
+
+[ext_resource type="PackedScene" uid="uid://dbe4xbnugrbuh" path="res://scenes/bg.tscn" id="1_bdheq"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_yilpr"]
+[ext_resource type="PackedScene" uid="uid://f65uvnqkvji2" path="res://scenes/ground.tscn" id="2_yafes"]
+[ext_resource type="PackedScene" uid="uid://dnbixc008kidk" path="res://scenes/character.tscn" id="3_nkvbl"]
+[ext_resource type="PackedScene" uid="uid://ddtque2a5bgj6" path="res://scenes/stump.tscn" id="7_5ups1"]
+[ext_resource type="PackedScene" uid="uid://c0uutiwakhsaw" path="res://scenes/level1.tscn" id="8_k5l5b"]
+[ext_resource type="PackedScene" uid="uid://b7ry7a2am2c00" path="res://scenes/game_over.tscn" id="8_n7j5p"]
+[ext_resource type="PackedScene" uid="uid://dvsv16kusa2go" path="res://scenes/portal.tscn" id="9_1ykaa"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_yilpr")
+
+[node name="Bg" parent="." instance=ExtResource("1_bdheq")]
+
+[node name="Ground" parent="." instance=ExtResource("2_yafes")]
+position = Vector2(-4, 8)
+
+[node name="Character" parent="." instance=ExtResource("3_nkvbl")]
+position = Vector2(39, 361)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(581, 325)
+
+[node name="game_over" parent="." instance=ExtResource("8_n7j5p")]
+process_mode = 2
+
+[node name="Stump" parent="." instance=ExtResource("7_5ups1")]
+position = Vector2(434, 514)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_k5l5b")]
+
+[node name="Portal" parent="." instance=ExtResource("9_1ykaa")]
+position = Vector2(1061, 439)
